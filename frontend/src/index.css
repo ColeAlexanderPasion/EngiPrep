@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode - Engineering Paper White */
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 222 47% 11%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 222 47% 15%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --border: 214 32% 80%;
+    --input: 214 32% 80%;
+    --ring: 222 47% 11%;
+    --radius: 0.25rem;
+  }
+
+  .dark {
+    /* Dark Mode - Slate 950 */
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 21 90% 48%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --success: 142 69% 58%;
+    --success-foreground: 222 47% 11%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 214 32% 80%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+/* Engineering grid pattern background */
+.grid-pattern {
+  background-image: 
+    linear-gradient(to right, hsl(var(--border) / 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--border) / 0.3) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Formula styling */
+.formula {
+  @apply font-mono bg-muted px-3 py-2 text-sm border border-border;
+}
+
+/* Quiz option styling */
+.quiz-option {
+  @apply border border-border p-4 cursor-pointer transition-all duration-150 hover:border-accent hover:bg-accent/5;
+}
+
+.quiz-option.selected {
+  @apply border-accent bg-accent/10;
+}
+
+.quiz-option.correct {
+  @apply border-success bg-success/10;
+}
+
+.quiz-option.incorrect {
+  @apply border-destructive bg-destructive/10;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-sm;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/50;
+}
+
+/* Mobile bottom nav safe area */
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom), 80px);
+}
+
+@layer base {
+  [data-debug-wrapper="true"] {
+    display: contents !important;
+  }
+}
