@@ -1,0 +1,151 @@
+{
+  "brand_identity": {
+    "name": "EngiPrep PH",
+    "archetype": "The Precision Architect",
+    "tone": "Professional, Supportive, Structured, Engineering-Focused",
+    "mission": "To be the reliable steel framework for every Filipino CE student's success.",
+    "visual_mood": "Blueprint-sharp, Industrial-clean, Academic-serious"
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Chivo, sans-serif",
+      "weights": ["700", "900"],
+      "usage": "Use for all page titles, section headers, and big stats.",
+      "letter_spacing": "tracking-tight"
+    },
+    "body": {
+      "font_family": "Public Sans, sans-serif",
+      "weights": ["400", "500", "600"],
+      "usage": "Use for general text, lessons, and explanations. High legibility."
+    },
+    "monospace": {
+      "font_family": "JetBrains Mono, monospace",
+      "usage": "Use for formulas, calculations, and numerical data."
+    },
+    "installation": "Execute in frontend: `npm install @fontsource/chivo @fontsource/public-sans @fontsource/jetbrains-mono`"
+  },
+  "colors": {
+    "light_mode": {
+      "background": "#F8FAFC",
+      "foreground": "#0F172A",
+      "card": "#FFFFFF",
+      "card_foreground": "#0F172A",
+      "popover": "#FFFFFF",
+      "popover_foreground": "#0F172A",
+      "primary": "#0F172A",
+      "primary_foreground": "#F8FAFC",
+      "secondary": "#E2E8F0",
+      "secondary_foreground": "#1E293B",
+      "muted": "#F1F5F9",
+      "muted_foreground": "#64748B",
+      "accent": "#F97316",
+      "accent_foreground": "#FFFFFF",
+      "destructive": "#EF4444",
+      "destructive_foreground": "#FFFFFF",
+      "border": "#CBD5E1",
+      "input": "#CBD5E1",
+      "ring": "#0F172A"
+    },
+    "dark_mode": {
+      "background": "#020617",
+      "foreground": "#F8FAFC",
+      "card": "#0F172A",
+      "card_foreground": "#F8FAFC",
+      "popover": "#0F172A",
+      "popover_foreground": "#F8FAFC",
+      "primary": "#F8FAFC",
+      "primary_foreground": "#0F172A",
+      "secondary": "#1E293B",
+      "secondary_foreground": "#F8FAFC",
+      "muted": "#1E293B",
+      "muted_foreground": "#94A3B8",
+      "accent": "#EA580C",
+      "accent_foreground": "#FFFFFF",
+      "destructive": "#7F1D1D",
+      "destructive_foreground": "#F8FAFC",
+      "border": "#1E293B",
+      "input": "#1E293B",
+      "ring": "#CBD5E1"
+    },
+    "palette_notes": "Primary is 'Navy Blue' (Slate 900). Accent is 'Safety Orange' (Orange 500). Background is 'Engineering Paper White' (Slate 50)."
+  },
+  "layout_strategy": {
+    "spacing_scale": "Use generous padding. p-6 or p-8 for cards. gap-6 for grids.",
+    "container_max_width": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "grid_system": "Use 'Bento Grid' strategy. Mix col-span-1, col-span-2, and col-span-full for visual interest.",
+    "mobile_first": "Start with grid-cols-1. Expand to grid-cols-2/3 on md/lg.",
+    "border_radius": "rounded-none or rounded-sm (max 4px). Keep it sharp and industrial."
+  },
+  "components": {
+    "buttons": {
+      "style": "Sharp edges or minimal rounding (rounded-sm). High contrast.",
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90",
+      "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+      "accent": "bg-accent text-accent-foreground hover:bg-accent/90 font-bold tracking-wide uppercase text-sm"
+    },
+    "cards": {
+      "style": "Flat with 1px border. Minimal shadow. Technical feel.",
+      "classes": "border-border bg-card text-card-foreground shadow-sm hover:shadow-md transition-shadow duration-200"
+    },
+    "inputs": {
+      "style": "Sharp edges. focus:ring-2 ring-offset-1.",
+      "classes": "rounded-sm border-input bg-background"
+    },
+    "navigation": {
+      "mobile": "Bottom navigation bar (fixed). Icons + Labels.",
+      "desktop": "Side navigation or top bar with clear active states."
+    }
+  },
+  "visual_enhancers": {
+    "textures": "Use subtle grid patterns (engineering graph paper) in backgrounds.",
+    "icons": "Use 'Lucide React' (default). Stroke width 1.5px or 2px for clarity.",
+    "micro_interactions": "Hover states should be snappy (duration-150). Active states should scale down slightly (scale-95).",
+    "charts": "Use Recharts/Shadcn Charts. Colors: Blue (Primary), Orange (Warning/Focus), Emerald (Success)."
+  },
+  "image_urls": {
+    "hero": [
+      {
+        "url": "https://images.unsplash.com/photo-1581674662583-5e89b374fae6?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Engineering blueprint analysis",
+        "category": "hero_background"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1767884161504-8bcd877d8971?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Modern bridge construction",
+        "category": "hero_accent"
+      }
+    ],
+    "students": [
+      {
+        "url": "https://images.unsplash.com/photo-1741699427706-7bfb38c716d8?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Students studying in library",
+        "category": "community_section"
+      }
+    ],
+    "tools": [
+      {
+        "url": "https://images.unsplash.com/photo-1574607383077-47ddc2dc51c4?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Engineering calculator",
+        "category": "tools_icon"
+      }
+    ]
+  },
+  "accessibility": {
+    "contrast": "Ensure text contrast ratio >= 4.5:1. Use Slate-600+ on white.",
+    "focus_states": "Visible focus rings (ring-2 ring-offset-2) are mandatory.",
+    "dark_mode": "Ensure dark mode is not just inverted colors, but carefully tuned Slate-900 palette."
+  },
+  "universal_guidelines": {
+    "do_not_use": ["Gradients on text", "Rounded-xl/2xl (too playful)", "Purple/Pink (unless specific)", "Inter font for headings"],
+    "must_do": ["Use data-testid for all interactables", "Responsive images (max-h-80vh)", "Mobile-first grids"],
+    "motion": "Use `framer-motion` for page transitions and complex state changes. Use CSS transitions for simple hover states."
+  },
+  "instructions_to_main_agent": [
+    "1. Install the fonts first.",
+    "2. Configure Tailwind colors to match the 'colors' section exactly.",
+    "3. Override the default 'radius' in tailwind.config.js to '0.25rem' (rounded-sm) or '0' (rounded-none).",
+    "4. Create the 'Bento Grid' layout for the Dashboard.",
+    "5. Use the provided images for the Landing/Home page hero section.",
+    "6. Ensure the 'Practice Quiz' mode feels distinct - maybe a 'Focus Mode' with minimal UI."
+  ]
+}
